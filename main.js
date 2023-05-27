@@ -69,7 +69,9 @@ function atualizaTabela() {
 function atualizaMediaFinal() {
   const media_final = calculaMediaFinal();
 
-  document.getElementById('media-final-valor').innerHTML = media_final;
+  document.getElementById('media-final-valor').innerHTML =
+    media_final.toFixed(2);
+  /* o .tofixed é para fixar casa decimais */
   document.getElementById('media-final-resultado').innerHTML =
     media_final >= notaMinima ? spanAprovado : spanReprovado;
 }
